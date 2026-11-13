@@ -2,6 +2,6 @@
 # @date_start 19th October, 2026
 
 [package]
-name = "arm64-styled-software-emulator"
+name = "fvm-rust-registers-v1"
 version = "0.1.0"
 edition = "2021"       
