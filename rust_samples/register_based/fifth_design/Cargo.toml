@@ -2,6 +2,6 @@
 # @date_start 7th November, 2026
 
 [package]
-name = "assembler-with-optimized-isa-virtual-machine"
+name = "fvm-rust-registers-v5"
 version = "0.1.0"
 edition = "2021"
