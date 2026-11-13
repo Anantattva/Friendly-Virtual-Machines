@@ -2,6 +2,6 @@
 # @date_start 19th October, 2026
 
 [package]
-name = "rust_arm64_v1"
+name = "arm64-styled-software-emulator"
 version = "0.1.0"
-edition = "2021"          # <-- add this. fixes try_into on slices.
+edition = "2021"       
