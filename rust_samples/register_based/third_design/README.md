@@ -8,7 +8,7 @@
 [![Footprint: < 1,500 LOC](https://img.shields.io/badge/Footprint-%3C1%2C500_LOC-brightgreen.svg?style=for-the-badge)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](LICENSE)
 
-*Part of the **[Friendly-Virtual-Machines](../../)** collection — readable, self-contained, bare-metal-inspired execution engines without the monolith bloat.*
+*Part of the **[Friendly-Virtual-Machines](https://github.com/Anantattva/Friendly-Virtual-Machines)** collection — readable, self-contained, bare-metal-inspired execution engines without the monolith bloat.*
 
 </div>
 
