@@ -2,6 +2,6 @@
 # @date_start 7th November, 2026
 
 [package]
-name = "mini-bytecode-interpreter"
+name = "assembler-with-optimized-isa-virtual-machine"
 version = "0.1.0"
 edition = "2021"
