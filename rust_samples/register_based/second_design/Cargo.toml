@@ -2,6 +2,6 @@
 # @date_start 26th October, 2026
 
 [package]
-name = "heap-based-bytecode-interpreter"
+name = "fvm-rust-registers-v2"
 version = "0.1.0"
 edition = "2021"
