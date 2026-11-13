@@ -44,14 +44,6 @@ When learning how virtual machines, instruction sets, and bytecode interpreters 
 
 > *Each VM lives in its own isolated crate/directory with dedicated benchmarks and documentation.*
 
-| Version / Sample | Architecture | Language | LOC | Key Highlights |
-| :--- | :--- | :--- | :--- | :--- |
-| **`rust_samples/v1`** | Stack / Basic Bytecode | Rust | `< 500` | Foundational fetch-decode-execute loop & arithmetic opcodes |
-| **`rust_samples/v2`** | Register-Based | Rust | `< 900` | Virtual register file, conditional jumps & memory operations |
-| **`rust_samples/register_v3`** | **ARM64 (AArch64) Subset** | Rust | `< 1,500` | 31 GP registers + `xzr`, full `NZCV` condition flags, two-pass symbolic assembler, call stack (`bl`/`ret`), & native benchmarks |
-| *`d_samples/...`* | *Planned* | *D (Dlang)* | `< 1,500` | *Compile-time metaprogramming & mixin-based opcode dispatch* |
-| *`js_samples/...`* | *Planned* | *JavaScript* | `< 1,500` | *TypedArray memory buffers & dynamic execution comparison* |
-
 *(Check individual sample folders for detailed ISA tables and deep-dive architecture notes.)*
 
 ---
