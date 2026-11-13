@@ -1,0 +1,60 @@
+// ।। ॐ नमः शिवाय ।। 
+// @date_start 26th October, 2026
+
+use crate::cpu_design;
+use crate::isa;
+
+pub struct CPU {
+  pub registers: cpu_design::Registers,
+  pub memory: Vec<u8>,
+  pub flags: cpu_design::Flags,
+  pub sp: u64,         // stack pointer/stack register
+  pub pc: usize,       // program counter
+  pub state: cpu_design::State,
+}
+
+impl CPU {
+  pub fn new(construction_size: usize) -> Self {
+    Self {
+      registers: cpu_design::Registers::new(),
+      memory: vec![0; construction_size],
+      flags: cpu_design::Flags::new(),
+      sp: 0,
+      pc: 0,
+      state: cpu_design::State::new(),
+    }
+  }
+}
+
+impl CPU {
+  pub fn clear_memory(&mut self) {
+    self.registers.x.fill(0);
+    self.memory.fill(0);
+  }
+  
+  pub fn reset(&mut self) {
+    self.clear_memory();
+    self.flags.reset();
+    self.sp = 0;
+    self.pc = 0;
+    self.state.reset();
+  }
+}
+
+impl CPU {
+  pub fn execute_program(&mut self, program: &isa::Program) {
+    self.state.is_running = true;
+    let mut old_pc = 0;
+    while self.state.is_running && self.pc < program.len() {
+      unsafe {
+        old_pc = self.pc;
+        program.get_unchecked(self.pc).execute(self);
+  
+        // << increment only if instruction didnt change pc >> \\
+        if old_pc == self.pc {
+          self.pc += 1;
+        }
+      }
+    }
+  }
+}
