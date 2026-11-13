@@ -3,7 +3,7 @@
 <!-- Replace with your logo path once uploaded -->
 <!-- <img src="assets/logo.png" width="220" alt="Friendly Virtual Machines Logo" /> -->
 
-# ⚡ Friendly Virtual Machines (`FVM`)
+# ⚡ Friendly Virtual Machines ⚡
 ### *A Curated Collection of Ultra-Fast, Miniature Virtual Machines (< 1,500 LOC)*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](LICENSE)
