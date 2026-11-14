@@ -4,7 +4,7 @@
 <!-- <img src="assets/logo.png" width="220" alt="Friendly Virtual Machines Logo" /> -->
 
 # ⚡ Friendly Virtual Machines ⚡
-### *A Curated Collection of Ultra-Fast, Miniature Virtual Machines*
+### *A Curated Collection of Diverse, Ultra-Fast, Miniature Virtual Machines*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](LICENSE)
 [![Core Language: Rust](https://img.shields.io/badge/Primary-Rust-orange.svg?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
