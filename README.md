@@ -51,25 +51,3 @@ Currently, the repo only contains Rust VMs:
 *(Check individual sample folders for detailed ISA tables and deep-dive architecture notes.)*
 
 ---
-
-## 🔬 Inside the Architecture (Example: `V3` ARM64-Inspired Engine)
-
-To give you a taste of what sits inside these folders, **V3** models an **AArch64** processor in pure Rust:
-
-```text
-  Assembly Source (.asm)
-         │
-         ▼
- ┌───────────────────┐
- │  Pass 1: Lexer &     │  ──► Builds Symbol Table (maps `loop:`, `exit:` to PC indices)
- │   Label Scanner      │
- └─────────┬─────────┘
-           ▼
- ┌───────────────────┐
- │  Pass 2: Command     │  ──► Emits typed `Vec<ISACommands>` with resolved branch targets
- │    Constructor       │
- └─────────┬─────────┘
-           ▼
- ┌───────────────────┐
- │    CPU Engine        │  ──► x0–x30 + xzr (x31) | NZCV Flags   | Byte-Addressed RAM | Call Stack
- └───────────────────┘
