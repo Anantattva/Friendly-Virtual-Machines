@@ -4,11 +4,11 @@
 <!-- <img src="assets/logo.png" width="220" alt="Friendly Virtual Machines Logo" /> -->
 
 # ⚡ Friendly Virtual Machines ⚡
-### *A Curated Collection of Ultra-Fast, Miniature Virtual Machines (< 1,500 LOC)*
+### *A Curated Collection of Ultra-Fast, Miniature Virtual Machines*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](LICENSE)
 [![Core Language: Rust](https://img.shields.io/badge/Primary-Rust-orange.svg?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
-[![Footprint: < 1,500 LOC](https://img.shields.io/badge/Footprint-%3C_1%2C500_LOC-brightgreen.svg?style=for-the-badge)]()
+[![Footprint: < 7,000 LOC](https://img.shields.io/badge/Footprint-%3C_7%2C000_LOC-brightgreen.svg?style=for-the-badge)]()
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-blue.svg?style=for-the-badge)]()
 
 *No 500,000-line production monoliths. No trivial 50-line toy calculators.*  
@@ -27,13 +27,13 @@ When learning how virtual machines, instruction sets, and bytecode interpreters 
 1. **The Toy Script:** A 50-line blog tutorial that evaluates `2 + 2` on a stack, missing registers, flags, memory addressing, and real control flow.
 2. **The Industrial Monolith:** Massive runtimes like V8, QEMU, or the JVM, where core execution loops are buried beneath millions of lines of JIT compilers, garbage collectors, and legacy infrastructure.
 
-**Friendly Virtual Machines** bridges that gap. Every VM in this repository is a self-contained, high-velocity execution engine engineered to stay **strictly under 1,500 lines of code**—complete with custom instruction sets, assemblers, and head-to-head native benchmarks.
+**Friendly Virtual Machines** bridges that gap. Every VM in this repository is a self-contained, high-velocity execution engine engineered to stay **strictly under 7,000 lines of code**—complete with custom instruction sets, assemblers, and head-to-head native benchmarks.
 
 ---
 
 ## 🧠 Design Philosophy
 
-* **📖 Readability First:** Every module is cleanly separated (CPU state, register file, ISA semantics, assembler) with clear architectural comments so you can trace every cycle from text to execution.
+* **📖 Readability First:** Every module is cleanly separated (CPU state, register file, ISA semantics, assembler, tests suite) with clear architectural comments so you can trace every cycle from text to execution.
 * **⚡ Engineered for Velocity:** Built with zero-cost abstractions, `#[inline(always)]` instruction dispatch loops, and deliberate low-level optimizations to minimize interpreter overhead.
 * **📦 Zero External Bloat:** Pure standard library implementations. Clone, compile, and run offline in seconds with zero dependency trees.
 * **📈 Evolutionary Progression:** Each sample builds upon the architectural lessons of the previous one—moving from foundational bytecode loops to full hardware-inspired register machines.
