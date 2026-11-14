@@ -12,7 +12,7 @@
 *No 500,000-line production monoliths. No trivial 50-line toy calculators.*  
 *Just clean, readable, bare-metal-inspired execution engines you can hold in your head at once.*
 
-[Why](#-why-this-repository-exists) • [Design Philosophy](#-design-philosophy) • [Contributing](CONTRIBUTING.md) • [License]("MIT License")
+[Why](#-why-this-repository-exists) • [Design Philosophy](#-design-philosophy) • [Contributing](CONTRIBUTING.md)
 
 </div>
 
