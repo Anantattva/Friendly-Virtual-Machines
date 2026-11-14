@@ -35,7 +35,7 @@ When learning how virtual machines, instruction sets, and bytecode interpreters 
 * **⚡ Engineered for Velocity:** Built with zero-cost abstractions, inlined dispatch code, instruction dispatch loops, and deliberate low-level optimizations to minimize interpreter overhead.
 * **📦 Zero External Bloat:** Pure standard library implementations. Clone, compile, and run offline in seconds with zero dependency trees.
 * **📈 Evolutionary Progression:** Each sample builds upon the architectural lessons of the previous one—moving from foundational bytecode loops to full hardware-inspired register machines.
-* **🪩 Diversity:** Each design showcases different implementations for the a specific philosophy with benchmarks, optimizations & trade-offs.
+* **🪩 Diversity:** Each design showcases different implementations for a specific philosophy with benchmarks, optimizations & trade-offs.
 
 ---
 
