@@ -6,4 +6,4 @@ If you are someone who is curious to showcase his/her own samples on this reposi
 - **Soulful Documentation:** Ensure rigorous & extensive comments or alternatively, READMEs with detailed architecture explanation, intuitive mental models & design choices.
 - **Test Suites:** Each VM sample must contain it's own clean test suite with diverse tests — and benchmarked against the host language.
 - **Preferred Languages: Rust, D or JS:** Though we accept samples in any language given it abides by our standards, the above 3 are most welcomed.
-- **Topics:** One must consider topics inside systems & compiler engineering only — such as bytecode interpreters, assembler, software emulators, JIT & AOT compilers, etc.
+- **Topics:** One must consider topics inside systems & compiler engineering only — such as bytecode interpreters, assembler, software emulators, transpilers, JIT & AOT compilers, etc.
