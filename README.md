@@ -1,8 +1,7 @@
 <div align="center">
 
-<img src="logo/fvm_logo_gemini1.png" alt="Friendly Virtual Machines Logo" />
+<img src="logo/fvm_logo_gemini2.png" alt="Friendly Virtual Machines Logo" />
 
-### ⚡ Friendly Virtual Machines ⚡
 ### *A Curated Collection of Diverse, Ultra-Fast, Miniature Virtual Machines*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](LICENSE)
