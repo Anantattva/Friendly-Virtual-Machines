@@ -2,6 +2,6 @@
 # @date_start 12th November, 2026
 
 [package]
-name = "pure-pointer-virtual-machine"
+name = "fvm-rust-pure-pointer-v1"
 version = "0.1.0"
 edition = "2021"
