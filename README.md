@@ -34,9 +34,10 @@ When learning how virtual machines, instruction sets, and bytecode interpreters 
 ## 🧠 Design Philosophy
 
 * **📖 Readability First:** Every module is cleanly separated (CPU state, register file, ISA semantics, assembler, tests suite) with clear architectural comments so you can trace every cycle from text to execution.
-* **⚡ Engineered for Velocity:** Built with zero-cost abstractions, `#[inline(always)]` instruction dispatch loops, and deliberate low-level optimizations to minimize interpreter overhead.
+* **⚡ Engineered for Velocity:** Built with zero-cost abstractions, inlined dispatch code, instruction dispatch loops, and deliberate low-level optimizations to minimize interpreter overhead.
 * **📦 Zero External Bloat:** Pure standard library implementations. Clone, compile, and run offline in seconds with zero dependency trees.
 * **📈 Evolutionary Progression:** Each sample builds upon the architectural lessons of the previous one—moving from foundational bytecode loops to full hardware-inspired register machines.
+* **🪩 Diversity:** Each design showcases different implementations for the a specific philosophy with benchmarks, optimizations & trade-offs.
 
 ---
 
