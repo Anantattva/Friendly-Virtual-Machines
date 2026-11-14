@@ -1,7 +1,6 @@
 <div align="center">
 
-<!-- Replace with your logo path once uploaded -->
-<!-- <img src="assets/logo.png" width="220" alt="Friendly Virtual Machines Logo" /> -->
+<img src="logo/fvm_logo_gemini1.png" alt="Friendly Virtual Machines Logo" />
 
 # ⚡ Friendly Virtual Machines ⚡
 ### *A Curated Collection of Diverse, Ultra-Fast, Miniature Virtual Machines*
