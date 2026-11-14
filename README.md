@@ -14,7 +14,7 @@
 *No 500,000-line production monoliths. No trivial 50-line toy calculators.*  
 *Just clean, readable, bare-metal-inspired execution engines you can hold in your head at once.*
 
-[Explore the VMs](#-the-virtual-machines) • [Design Philosophy](#-design-philosophy) • [Quick Start](#-quick-start) • [Roadmap](#-roadmap) • [Contributing](#-contributing)
+[Why](#-why-this-repository-exists) • [Design Philosophy](#-design-philosophy) • [Quick Start](#-quick-start) • [Roadmap](#-roadmap) • [Contributing](#-contributing)
 
 </div>
 
