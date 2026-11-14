@@ -44,6 +44,9 @@ When learning how virtual machines, instruction sets, and bytecode interpreters 
 
 > *Each VM lives in its own isolated crate/directory with dedicated benchmarks and documentation.*
 
+Currently, the repo only contains Rust VMs:
+- [Rust samples](rust_samples)
+
 *(Check individual sample folders for detailed ISA tables and deep-dive architecture notes.)*
 
 ---
