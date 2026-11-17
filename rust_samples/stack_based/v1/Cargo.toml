@@ -1,0 +1,7 @@
+# // ॐ श्री गणेशाय नम \\
+# // ।। ॐ नमः शिवाय ।। \\
+
+[package]
+name = "fvm-rust-stack-v1"
+version = "0.1.0"
+edition = "2021"
