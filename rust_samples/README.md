@@ -1,4 +1,4 @@
-## 🪻🪻 Rust VM Collection
+## 🪻 Rust VM Collection 🪻
 
 This folder contains all sample virtual machines written in Rust.
 
