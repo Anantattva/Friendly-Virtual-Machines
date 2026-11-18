@@ -12,30 +12,39 @@ Executed on mobile hardware (Redmi 15 5G) via Termux, VM achieves remarkably tig
 
 ```text
 ======================================
- Running D Virtual Machine Test Suite 
+ Running D Virtual Machine Test Suite
 ======================================
 
-++ Addition Test (Max: 1000) ++
-  * Average D time:   4,102 ns.
-  * Average VM time:  23,225 ns.
-  * Gap (VM / D):     5.66x
+++ Addition Test ++
+== Max: 1000 | Times: 100
+Sum: 500500
+Average D time:   4102ns.
+Average VM time:  23225ns.
+Gap (VM / D):     5.66x
 
-++ Cube Addition Test (Max: 500) ++
-  * Average D time:   2,135 ns.
-  * Average VM time:  27,743 ns.
-  * Gap (VM / D):     12.99x
+++ Cube Addition Test ++
+== Max: 500 | Times: 100
+Sum: 15687562500
+Average D time:   2135ns.
+Average VM time:  27743ns.
+Gap (VM / D):     12.99x
 
-++ Collatz Test (Num: 27) ++
-  * D VM time:        7,080 ns.
-  * Native time:      400 ns.
-  * Gap (VM / Native): 17.70x
+++ Collatz Test ++
+== Num: 27 | Times: 10 ==
+Steps: 111
+D VM time:           7080 ns.
+Native time:         400 ns.
+Gap (VM / Native):   17.70x.
 
-++ Fibonacci Test (Index: 20) ++
-  * Native D average time: 111 ns.
-  * D VM average time:     788 ns.
-  * Gap (VM / Native):     7.10x
+++ Fibonacci Test ++
+== Index: 20 | Times: 100 ==
+Fib: 6765.
+Native D average time:   111 ns.
+D VM average time:       788 ns.
+Gap (VM / Native):       7.10x.
 
 All benchmark suites completed successfully!
+➜  DlangVMV1
 ```
 
 ## 🛠️ Architectural Design
