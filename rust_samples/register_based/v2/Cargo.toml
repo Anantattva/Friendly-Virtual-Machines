@@ -2,6 +2,6 @@
 # @date_start 26th October, 2026
 
 [package]
-name = "fvm-rust-registers-v2"
+name = "fvm-rust-register-v2"
 version = "0.1.0"
 edition = "2021"
