@@ -8,7 +8,7 @@ Inspired by ARM64 architectural patterns, this VM features an extensible Instruc
 
 ## 🚀 Performance Benchmarks
 
-Executed on mobile hardware via Termux, VM achieves remarkably tight performance gaps (as low as **5.66x** overhead) compared to native D execution:
+Executed on mobile hardware (Redmi 15 5G) via Termux, VM achieves remarkably tight performance gaps (as low as **5.66x** overhead) compared to native D execution:
 
 ```text
 ======================================
