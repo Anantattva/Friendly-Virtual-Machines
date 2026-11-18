@@ -48,10 +48,10 @@ All benchmark suites completed successfully!
 ```
 
 ## 🛠️ Architectural Design
- * Register File (architecture.d): 32 general-purpose 64-bit registers (x0 through x31), where register x31 is hardwired to 0 for RISC-style optimization. Includes split stack and heap memory allocations.
- * Polymorphic ISA (isa.d): Clean object-oriented instruction pattern implementing an ISACommand interface with modular execution handlers for data movement, arithmetic (add, sub, mul, div, rem), stack operations, and conditional branching.
- * Two-Pass Assembler (assembler.d): Strips comments, tokenizes assembly instructions, builds a symbol table for label resolution, and compiles human-readable assembly text directly into executable VM bytecode.
- * Execution Core (cpu.d): Employs an efficient fetch-execute instruction pointer loop with safe stack management and little-endian memory conversion routines.
+ * **Register File (architecture.d):** 32 general-purpose 64-bit registers (x0 through x31), where register x31 is hardwired to 0 for RISC-style optimization. Includes split stack and heap memory allocations.
+ * **Polymorphic ISA (isa.d):** Clean object-oriented instruction pattern implementing an ISACommand interface with modular execution handlers for data movement, arithmetic (add, sub, mul, div, rem), stack operations, and conditional branching.
+ * **Two-Pass Assembler (assembler.d):** Strips comments, tokenizes assembly instructions, builds a symbol table for label resolution, and compiles human-readable assembly text directly into executable VM bytecode.
+ * **Execution Core (cpu.d):** Employs an efficient fetch-execute instruction pointer loop with safe stack management and little-endian memory conversion routines.
 
 ```
 📂 Project Structure
