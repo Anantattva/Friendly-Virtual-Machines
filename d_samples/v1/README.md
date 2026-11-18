@@ -44,7 +44,6 @@ D VM average time:       788 ns.
 Gap (VM / Native):       7.10x.
 
 All benchmark suites completed successfully!
-➜  DlangVMV1
 ```
 
 ## 🛠️ Architectural Design
@@ -68,7 +67,7 @@ Make sure you have a D compiler (like dmd or ldc2) installed (available via pkg 
 >```dub run -b release```
 
 ## 📜 Example Assembly Code
-Here is a sample of how assembly code looks in DlangVM's custom syntax (demonstrated in the Collatz benchmark):
+Here is a sample of how assembly code looks in the VM's custom syntax (demonstrated in the Collatz benchmark):
 
 ```
 mov x0, #27  // Initialize starting number
