@@ -1,0 +1,22 @@
+// ॐ श्री गणेशाय नम \\
+// ।। ॐ नमः शिवाय ।। \\
+// @date_start 10th November, 2026
+
+name "fvm-d-register-v1"
+description "An ARM64-inspired register and stack-based virtual machine written in D"
+authors "Anantattva"
+copyright "Copyright © 2026, Anantattva"
+license "MIT"
+
+// Target type (executable)
+targetType "executable"
+targetPath "bin"
+
+// Source directory configuration
+sourcePaths "source"
+importPaths "source"
+
+// Build configurations (e.g., optimizations for release)
+configuration "default" {
+    targetName "fvm-d-register-v1"
+}
