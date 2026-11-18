@@ -8,7 +8,7 @@ Inspired by ARM64 architectural patterns, this VM features an extensible Instruc
 
 ## 🚀 Performance Benchmarks
 
-Executed on mobile hardware (Redmi 15 5G) via Termux, VM achieves remarkably tight performance gaps (as low as **5.66x** overhead) compared to native D execution:
+Executed on mobile hardware (Redmi 15 5G) via Termux, our VM achieves remarkably tight performance gaps (as low as **5.66x** overhead) compared to native D execution:
 
 ```text
 ======================================
@@ -67,7 +67,7 @@ Make sure you have a D compiler (like dmd or ldc2) installed (available via pkg 
 >```dub run -b release```
 
 ## 📜 Example Assembly Code
-Here is a sample of how assembly code looks in the VM's custom syntax (demonstrated in the Collatz benchmark):
+Here is a sample of how assembly code looks in our VM's custom syntax (demonstrated in the Collatz benchmark):
 
 ```
 mov x0, #27  // Initialize starting number
