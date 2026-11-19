@@ -1,3 +1,13 @@
+## File Structure
+```
+v1/src
+|— source.js   // the entry point
+|— state.js    // contains classes for CPU design
+|— cpu.js      // contains the actual CPU/VM
+|— isa.js      // contains bytecode
+|— tests.js    // contains tests functions with benchmarks
+```
+
 ## Run & Benchmarks
 Ensure you have a JS runtime like Node/Deno/Bun. Run it with:
 ```node
