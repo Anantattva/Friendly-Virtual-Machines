@@ -1,6 +1,7 @@
 <div align="center">
 
-# ⚡ FVM-V3: ARM64-Inspired Register Virtual Machine
+## ⚡ FVM-Rust-Register-V3 ⚡
+**ARM64-Inspired Register Virtual Machine**
 ### *High-Velocity Bytecode Execution & Two-Pass Assembler in Pure Rust (<1,500 LOC)*
 
 [![Language: Rust](https://img.shields.io/badge/Language-Rust-orange.svg?style=for-the-badge&logo=rust)](https://www.rust-lang.org/)
@@ -16,7 +17,7 @@
 
 ## ✨ Overview
 
-**FVM-V3** is a compact, blazingly fast register-based virtual machine modeled after **ARM64 (AArch64)**. Built from the ground up with zero external dependencies, it pairs a **two-pass text assembler** (complete with symbolic label resolution) with an **inline-optimized fetch-decode-execute loop**.
+This is a compact, blazingly fast register-based virtual machine modeled after **ARM64 (AArch64)**. Built from the ground up with zero external dependencies, it pairs a **two-pass text assembler** (complete with symbolic label resolution) with an **inline-optimized fetch-decode-execute loop**.
 
 Unlike toy stack calculators or 500,000-line production runtimes, V3 sits in the sweet spot: **every single architectural mechanism—registers, condition flags, memory addressing, call stacks, and assembly parsing—is transparent, hackable, and readable in one sitting.**
 
