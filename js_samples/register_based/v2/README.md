@@ -10,10 +10,10 @@
 ## 📖 Table of Contents
 - [Overview](#-overview)
 - [Architecture](#-architecture)
-- [Instruction Set (ISA)]()
+- [Instruction Set (ISA)](#-instruction-set-isa)
 - [Assembly Design](#-assembly-design)
 - [File Structure](#-file-structure)
-- [Key Concepts]
+- [Key Concepts](#-key-concepts)
 - [Benchmarks](#-benchmarks)
 - [Getting Started](#-getting-started)
 
