@@ -153,42 +153,6 @@ export function runPrimeSumTest(index, times) {
   // x0: sum | x1: found count | x2: target count (index) | x3: candidate prime
   // x4: divisor | x5: candidate / 2 | x6: remainder
   const myVM = new VM(1024, 4096);
-  /*
-  const program = [
-    new ISA.Movi(0, 0),      // [0]  sum = 0
-    new ISA.Movi(1, 0),      // [1]  count = 0
-    new ISA.Movi(2, index),  // [2]  target = index
-    new ISA.Movi(3, 2),      // [3]  candidate = 2
-
-    // -- outer loop: stop once count == index -- \\
-    new ISA.Cmpr(1, 2),      // [4]  cmp count, target
-    new ISA.Beq(21),         // [5]  if count == target -> Exit
-
-    // -- primality check loop for candidate -- \\
-    new ISA.Movi(4, 2),      // [6]  divisor = 2
-    new ISA.Divi(5, 3, 2),   // [7]  limit = candidate / 2
-    new ISA.Cmpr(4, 5),      // [8]  cmp divisor, limit
-    new ISA.Bgt(15),         // [9]  if divisor > limit -> prime found
-    new ISA.Remr(6, 3, 4),   // [10] rem = candidate % divisor
-    new ISA.Cmpi(6, 0),      // [11] cmp rem, 0
-    new ISA.Beq(19),         // [12] if rem == 0 -> not prime
-    new ISA.Addi(4, 4, 1),   // [13] divisor++
-    new ISA.B(8),            // [14] next divisor
-
-    // -- prime handler: accumulate sum & advance -- \\
-    new ISA.Addr(0, 0, 3),   // [15] sum += candidate
-    new ISA.Addi(1, 1, 1),   // [16] count++
-    new ISA.Addi(3, 3, 1),   // [17] candidate++
-    new ISA.B(4),            // [18] next prime slot
-
-    // -- composite handler: try next candidate -- \\
-    new ISA.Addi(3, 3, 1),   // [19] candidate++
-    new ISA.B(6),            // [20] re-check primality
-
-    new ISA.Exit()           // [21] halt
-  ];
-  */
-
   const program = [
     inst.movi, 0x00, 0x00,   // [0x00] sum (r0 = 0)
     inst.movi, 0x01, index,  // [0x03] target count (r1 = index)
