@@ -247,7 +247,94 @@ Each new opcode is a single handler plus one entry in dispatchTable — no plumb
 Sample Output
 
 ```
+➜  RegisterVMV2 node source.js
+++ || Addition Test || ++
+== Max: 100 | Times: 1 ==
+Sum: 5050
+JS time:         16718ns.
+VM time:         802656ns.
+Gap (VM / JS):   48x.
 
+++ || Addition Test || ++
+== Max: 200 | Times: 100 ==
+Sum: 20100
+JS time:         5715ns.
+VM time:         56971ns.
+Gap (VM / JS):   10x.
+
+++ || Addition Test || ++
+== Max: 2000 | Times: 100 ==
+Sum: 2001000
+JS time:         38615ns.
+VM time:         141638ns.
+Gap (VM / JS):   4x.
+
+++ || Addition Test || ++
+== Max: 3500 | Times: 250 ==
+Sum: 6126750
+JS time:         15978ns.
+VM time:         226336ns.
+Gap (VM / JS):   14x.
+
+➜  RegisterVMV2 deno source.js
+++ || Addition Test || ++
+== Max: 100 | Times: 1 ==
+Sum: 5050
+JS time:         41666ns.
+VM time:         602031ns.
+Gap (VM / JS):   14x.
+
+++ || Addition Test || ++
+== Max: 200 | Times: 100 ==
+Sum: 20100
+JS time:         6238ns.
+VM time:         232007ns.
+Gap (VM / JS):   37x.
+
+++ || Addition Test || ++
+== Max: 2000 | Times: 100 ==
+Sum: 2001000
+JS time:         15207ns.
+VM time:         185507ns.
+Gap (VM / JS):   12x.
+
+++ || Addition Test || ++
+== Max: 3500 | Times: 250 ==
+Sum: 6126750
+JS time:         9543ns.
+VM time:         211423ns.
+Gap (VM / JS):   22x.
+
+➜  RegisterVMV2 bun source.js
+++ || Addition Test || ++
+== Max: 100 | Times: 1 ==
+Sum: 5050
+JS time:         12188ns.
+VM time:         1596355ns.
+Gap (VM / JS):   131x.
+
+++ || Addition Test || ++
+== Max: 200 | Times: 100 ==
+Sum: 20100
+JS time:         17043ns.
+VM time:         98217ns.
+Gap (VM / JS):   6x.
+
+++ || Addition Test || ++
+== Max: 2000 | Times: 100 ==
+Sum: 2001000
+JS time:         13418ns.
+VM time:         218597ns.
+Gap (VM / JS):   16x.
+
+++ || Addition Test || ++
+== Max: 3500 | Times: 250 ==
+Sum: 6126750
+JS time:         8950ns.
+VM time:         133625ns.
+Gap (VM / JS):   15x.
+
+➜  RegisterVMV2
 ```
 
 **The gap is dominated by:**
