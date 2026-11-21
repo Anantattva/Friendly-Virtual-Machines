@@ -46,7 +46,7 @@ When learning how virtual machines, instruction sets, and bytecode interpreters 
 Currently, the repo contains Rust & D samples:
 - [Rust samples](rust_samples)
 - [D samples](d_samples)
-
+- [JS Samples](js_samples)
 *(Check individual sample folders for detailed ISA tables and deep-dive architecture notes.)*
 
 ---
