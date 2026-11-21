@@ -170,26 +170,26 @@ tests.js        ← Three benchmark suites + JS baselines + assertions
 source.js       ← Entry point (calls runTests())
 ```
 
-### isa.js
+**isa.js**
 Contains every instruction handler as a named export. Each handler shares the signature (vm, program) and mutates vm.pc and vm.registers. Also exports:
 - inst — opcode constants
 - op — arithmetic opcode constants
 - cd — condition‑code constants
 - dispatchTable — indexed array of handlers
 
-### vm.js
+**vm.js**
 Defines Registers, Memory, State, and the VM class. The VM exposes:
 - executeProgram(program) — interpreter loop
 - reset() — clears registers + memory and resets pc / sp / state
 
-### tests.js
+**tests.js**
 Three workloads, each with:
 - A pure JS baseline timed with process.hrtime.bigint().
 - An equivalent VM program timed over the same number of repetitions.
 - A console.assert verifying that the VM result matches the JS result.
 - A printed report including the Gap (VM / JS) ratio.
 
-### source.js
+**source.js**
 The entry point — just calls runTests().
 
 ---
@@ -239,7 +239,7 @@ Each new opcode is a single handler plus one entry in dispatchTable — no plumb
 ## 📊 Benchmarks
 `runTests()` executes three workloads at increasing scale, each repeated multiple times to average out JIT noise:
 
-Workload Parameter Repetitions
+**Workload Parameter Repetitions**
 - **Addition N** = 100, 200, 2000, 3500 1, 100, 100, 250, 250
 - **Collatz n** = 5, 25, 70, 101 1, 100, 100, 250, 250
 - **Prime Sum first N primes** = 10, 25, 50, 100 1, 100, 100, 250, 250
@@ -250,13 +250,12 @@ Sample Output
 
 ```
 
-The gap is dominated by:
+**The gap is dominated by:**
+- One JS function call per VM instruction (dispatch overhead).
+- Array bounds lookups for register reads/writes.
+- -No JIT‑friendly type feedback inside handlers (they're polymorphic across opcodes).
 
-· One JS function call per VM instruction (dispatch overhead).
-· Array bounds lookups for register reads/writes.
-· No JIT‑friendly type feedback inside handlers (they're polymorphic across opcodes).
-
-These are exactly the costs any tree‑walking interpreter pays — and exactly why bytecode JITs and threaded interpreters exist.
+**These are exactly the costs any tree‑walking interpreter pays — and exactly why bytecode JITs and threaded interpreters exist.**
 
 ---
 
@@ -267,14 +266,14 @@ These are exactly the costs any tree‑walking interpreter pays — and exactly 
 node source.js
 ```
 
-No dependencies. No build step. Pure Node.js.
+*No dependencies. No build step. Pure Node.js.*
 
-Requirements:
+**Requirements:**
 - Node.js ≥ 16 (uses process.hrtime.bigint()).
 - Or equivalently, Deno or Bun.
 - A terminal to enjoy the benchmark output.
 
-Writing Your First Program
+**Writing Your First Program**
 
 ```js
 import { inst, op, cd } from "./isa.js";
