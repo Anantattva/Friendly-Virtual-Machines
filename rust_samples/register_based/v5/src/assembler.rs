@@ -5,7 +5,7 @@
 
 use std::collections::HashMap;
 
-use crate::isa::{Operation, Condition, ISACommand};
+use crate::isa::{ Operation, Condition, ISACommand };
 use crate::isa::Program;
 
 ///// ================== \\\\\
@@ -132,14 +132,14 @@ pub fn handle_three_length_command(inst: &str, op1: &str, op2: &str) -> Result<I
   match inst {
     "mov" => handle_mov_command(op1, op2),
     "ldr" => handle_ldr_command(&vec![op1, op2]),
-    "str" => handle_str_command(&vec![op1, op1]),
+    "str" => handle_str_command(&vec![op1, op2]),
     _ => Err(AssemblerError::TextParsingError(format!("Unknown or unimplemented instruction: '{}'.", inst))),
   }
 }
 
 pub fn handle_ldp_command(tokens: &Vec<&str>) -> Result<ISACommand, AssemblerError> {
   let op1 = tokens[0];
-  let op2 = tokens[0];
+  let op2 = tokens[1];
   let parsed_reg1 = parse_reg(op1)?;
   let parsed_reg2 = parse_reg(op2)?;
   let is_float = op1.contains('v');
@@ -165,7 +165,7 @@ pub fn handle_ldp_command(tokens: &Vec<&str>) -> Result<ISACommand, AssemblerErr
 
 pub fn handle_stp_command(tokens: &Vec<&str>) -> Result<ISACommand, AssemblerError> {
   let op1 = tokens[0];
-  let op2 = tokens[0];
+  let op2 = tokens[1];
   let parsed_reg1 = parse_reg(op1)?;
   let parsed_reg2 = parse_reg(op2)?;
   let is_float = op1.contains('v');
