@@ -238,6 +238,8 @@ pub fn run_stack_test1(a: u64, b: u64) {
       a, b
     )
   );
+
+  my_cpu.reset();
   my_cpu.execute_program(&program.unwrap());
 
   println!("++ Stack Test 1 using Subroutines ++");
@@ -273,6 +275,8 @@ pub fn run_stack_test2(a: u64, b: u64) {
       a, b
     )
   );
+
+  my_cpu.reset();
   my_cpu.execute_program(&program.unwrap());
 
   println!("++ Stack Test 2 using Subroutines & Frames ++");
