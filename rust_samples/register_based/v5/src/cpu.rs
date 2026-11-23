@@ -3,7 +3,7 @@
 
 #![allow(warnings)]
 
-use crate::architecture::{Registers, State, Memory};
+use crate::architecture::{ Registers, State, Memory };
 use crate::isa::Program;
 
 pub struct CPU {
@@ -45,7 +45,7 @@ impl CPU {
     self.registers.v.0.fill(0.0);
     self.memory.stack.fill(0);
     self.memory.heap.fill(0);
-    self.registers.sp = 0;
+    self.registers.sp = self.memory.stack.len();
     self.registers.hp = 0;
   }
 
