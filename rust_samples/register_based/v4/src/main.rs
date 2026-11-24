@@ -4,7 +4,6 @@
 mod cpu;
 mod cpu_design;
 mod ir;
-mod syscalls;
 mod tests;
 
 fn main() {
