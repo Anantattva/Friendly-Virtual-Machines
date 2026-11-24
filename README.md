@@ -68,7 +68,7 @@ Now, just run via cargo:
 cargo run --release
 ```
 
-That's sit. That's all. Same for others.
+That's it. That's all. Same for others.
 
 For D, you might type:
 ```shell
