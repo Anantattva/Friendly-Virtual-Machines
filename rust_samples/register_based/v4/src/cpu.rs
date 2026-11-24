@@ -1,27 +1,29 @@
 // ।। ॐ नमः शिवाय ।। 
 // @date_start 5th November, 2026
 
-use crate::cpu_design;
+use crate::cpu_design::{ Registers, State, Flags };
 use crate::ir;
 
 pub struct CPU {
-  pub registers: cpu_design::Registers,
+  pub registers: Registers,
   pub memory: Vec<u8>,
   pub sp: usize,         // stack pointer/stack register
   pub stack_line: Vec<usize>,
   pub pc: usize,       // program counter
-  pub state: cpu_design::State,
+  pub state: State,
+  pub flags: Flags,
 }
 
 impl CPU {
   pub fn new(construction_size: usize) -> Self {
     Self {
-      registers: cpu_design::Registers::new(),
+      registers: Registers::new(),
       memory: vec![0; construction_size],
       sp: 0,
       stack_line: vec![],
       pc: 0,
-      state: cpu_design::State::new(),
+      state: State::new(),
+      flags: Flags::new(),
     }
   }
 }
