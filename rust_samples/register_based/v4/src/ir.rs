@@ -12,7 +12,7 @@ pub enum Condition {
   GreaterThan,         // bgt
   LessThan,            // blt
   GreaterThanOrEqual,  // bge
-  LessThanOrEqual      // ble
+  LessThanOrEqual,     // ble
 }
 
 #[derive(Debug)]
@@ -21,7 +21,7 @@ pub enum Operation {
   Sub,
   Mul,
   Div,
-  Rem
+  Rem,
 }
 
 #[derive(Debug)]
@@ -35,8 +35,7 @@ pub enum IRCommands {
   BranchRegReg { rn: usize, rm: usize, cd: Condition, ta: usize },
   Call         { sb: usize },
   Return,
-  Syscall      { scid: SyscallsID },
-  Exit
+  Exit,
 }
 
 impl IRCommands {
