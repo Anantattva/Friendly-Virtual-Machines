@@ -53,7 +53,12 @@ Currently, the repo contains Rust & D samples:
 ---
 
 ## 🎬 How to Run
-Navigate to any project folder to want. For example, let's navigate to `v5` of `register_based` of `rust_samples`.
+Clone the repo into any preferred directory or name & navigate to it:
+```shell
+git clone https://github.com/Anantattva/Friendly-Virtual-Machines fvm && cd fvm
+```
+
+Now, navigate to any project folder you want. For example, let's navigate to `v5` of `register_based` of `rust_samples`.
 ```shell
 cd rust_samples/register_based/v5
 ```
@@ -69,7 +74,14 @@ For D, you might type:
 ```shell
 dub run -b release
 ```
+
 For JS:
 ```shell
 node source.js
 ```
+
+**Requirements:**
+- A terminal & `git`.
+- Rust toolchain: `rustc, cargo` & `llvm`.
+- D toolchain: `dub` & `dmd/ldc2/gdc`.
+- JS toolchain: `nodejs/deno/bun`.
