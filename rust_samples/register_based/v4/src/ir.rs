@@ -4,7 +4,6 @@
 #![allow(warnings)]
 
 use crate::cpu::CPU;
-use crate::syscalls::SyscallsID;
 
 #[derive(Debug)]
 pub enum Condition {
@@ -165,9 +164,6 @@ impl IRCommands {
       },
       IRCommands::Return => {
         cpu.pc = cpu.stack_line.pop().expect("StackUnderflowError: Caught at IR execution stage.\nNo corresponding stack address for `Return` instruction.\nLikely caused due to uneven number of Call-Return.\nConsider having a `Return` for each `Call` and vice-versa.");
-      },
-      IRCommands::Syscall { scid } => {
-        cpu.call_system(scid);
       },
       IRCommands::Exit  => {
         cpu.state.is_running = false;
