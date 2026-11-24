@@ -47,6 +47,29 @@ Currently, the repo contains Rust & D samples:
 - [Rust samples](rust_samples)
 - [D samples](d_samples)
 - [JS Samples](js_samples)
+
 *(Check individual sample folders for detailed ISA tables and deep-dive architecture notes.)*
 
 ---
+
+## 🎬 How to Run
+Navigate to any project folder to want. For example, let's navigate to `v5` of `register_based` of `rust_samples`.
+```shell
+cd rust_samples/register_based/v5
+```
+
+Now, just run via cargo:
+```shell
+cargo run --release
+```
+
+That's sit. That's all. Same for others.
+
+For D, you might type:
+```shell
+dub run -b release
+```
+For JS:
+```shell
+node source.js
+```
