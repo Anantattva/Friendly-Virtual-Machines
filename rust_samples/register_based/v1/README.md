@@ -98,30 +98,30 @@ EORI 0x1B [op \| rd \| rn \| imm:8] Bitwise XOR with immediate
 **Shifts**
 
 Mnemonic Opcode Encoding Description
-LSL 0x1C [op \| rd \| rn \| rm] Logical shift left by rm & 0x3F
-LSLI 0x1D [op \| rd \| rn \| imm:6] Logical shift left immediate
-LSR 0x1E [op \| rd \| rn \| rm] Logical shift right
-LSRI 0x1F [op \| rd \| rn \| imm:6] Logical shift right immediate
-ASR 0x20 [op \| rd \| rn \| rm] Arithmetic shift right (sign-preserving)
-ASRI 0x21 [op \| rd \| rn \| imm:6] Arithmetic shift right immediate
+- LSL 0x1C [op \| rd \| rn \| rm] Logical shift left by rm & 0x3F
+- LSLI 0x1D [op \| rd \| rn \| imm:6] Logical shift left immediate
+- LSR 0x1E [op \| rd \| rn \| rm] Logical shift right
+- LSRI 0x1F [op \| rd \| rn \| imm:6] Logical shift right immediate
+- ASR 0x20 [op \| rd \| rn \| rm] Arithmetic shift right (sign-preserving)
+- ASRI 0x21 [op \| rd \| rn \| imm:6] Arithmetic shift right immediate
 
 **Memory**
 
 Mnemonic Opcode Encoding Description
-LDR 0x07 [op \| rd \| rn \| imm:8] Load 8 bytes from [rn + imm]
-STR 0x08 [op \| rt \| rn \| imm:8] Store 8 bytes to [rn + imm]
-LDRB 0x24 [op \| rd \| rn \| imm:8] Load single byte
-STRB 0x25 [op \| rt \| rn \| imm:8] Store single byte
+- LDR 0x07 [op \| rd \| rn \| imm:8] Load 8 bytes from [rn + imm]
+- STR 0x08 [op \| rt \| rn \| imm:8] Store 8 bytes to [rn + imm]
+- LDRB 0x24 [op \| rd \| rn \| imm:8] Load single byte
+- STRB 0x25 [op \| rt \| rn \| imm:8] Store single byte
 
 **Comparison & Flag-Setting**
 
 Mnemonic Opcode Encoding Description
-CMP 0x09 [op \| rn \| rm \| unused] Set flags from rn - rm
-CMPI 0x27 [op \| rn \| imm:16] Set flags from rn - imm
-ADDS 0x28 [op \| rd \| rn \| rm] ADD + set flags
-SUBS 0x29 [op \| rd \| rn \| rm] SUB + set flags
-ADDIS 0x2A [op \| rd \| rn \| imm:8] ADDI + set flags
-SUBIS 0x2B [op \| rd \| rn \| imm:8] SUBI + set flags
+- CMP 0x09 [op \| rn \| rm \| unused] Set flags from rn - rm
+- CMPI 0x27 [op \| rn \| imm:16] Set flags from rn - imm
+- ADDS 0x28 [op \| rd \| rn \| rm] ADD + set flags
+- SUBS 0x29 [op \| rd \| rn \| rm] SUB + set flags
+- ADDIS 0x2A [op \| rd \| rn \| imm:8] ADDI + set flags
+- SUBIS 0x2B [op \| rd \| rn \| imm:8] SUBI + set flags
 
 ---
 
