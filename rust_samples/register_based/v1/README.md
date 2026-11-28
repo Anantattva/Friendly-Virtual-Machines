@@ -129,13 +129,13 @@ SUBIS 0x2B [op \| rd \| rn \| imm:8] SUBI + set flags
 
 All condition codes follow the classic ARM semantics:
 
-Flag Meaning Source
-Z Result is zero result == 0
-N Result's MSB is 1 (result as i64) < 0
-C ADD: carry-out · SUB: no borrow overflowing_add().1 / !overflowing_sub().1
-V Signed overflow Operand/result sign mismatch
+**Flag Meaning Source**
+- Z Result is zero result == 0
+- N Result's MSB is 1 (result as i64) < 0
+- C ADD: carry-out · SUB: no borrow overflowing_add().1 / !overflowing_sub().1
+- V Signed overflow Operand/result sign mismatch
 
-This gives you the full set of comparison branches — EQ, NE, LT, LE, GT, GE — all derived cleanly from (N, Z, C, V).
+> This gives you the full set of comparison branches — EQ, NE, LT, LE, GT, GE — all derived cleanly from (N, Z, C, V).
 
 ---
 
@@ -184,16 +184,16 @@ After execution, x3 == 147 (21 × 7). ✅
 
 Benchmarks comparing the VM against native Rust (same algorithms, same hardware):
 
-Workload Rust RISC-VM Overhead
-Sum 1..100 313 ns 2136 ns 6.8×
-Sum 1..200 469 ns 3750 ns 8.0×
-Sum of squares 1..100 261 ns 2604 ns 10.0×
-Fibonacci(71) 208 ns 2292 ns 11.0×
-Pell(21) 52 ns 781 ns 15.0×
+**Workload VM/Rust Overhead**
+- Sum 1..100 313 ns 2136 ns 6.8×
+- Sum 1..200 469 ns 3750 ns 8.0×
+- Sum of squares 1..100 261 ns 2604 ns 10.0×
++ Fibonacci(71) 208 ns 2292 ns 11.0×
+- Pell(21) 52 ns 781 ns 15.0×
 
 7–11× overhead is excellent for a pure-interpreter design with no JIT. This is the kind of gap you'd expect from a well-tuned bytecode VM — every instruction goes through a function-pointer indirection and a full decode.
 
-For context: execute_instruction does fetch → decode → dispatch → execute in ~20 ns on average, including branch prediction.
+> For context: execute_instruction does fetch → decode → dispatch → execute in ~20 ns on average, including branch prediction.
 
 ---
 
@@ -212,7 +212,7 @@ src/
 
 ### ✦ Design Notes
 
-Compile-time dispatch
+**Compile-time dispatch / Function Pointer Dispatch Table**
 
 The instruction table is a const array of function pointers:
 
@@ -255,25 +255,11 @@ cargo run --release
 ```
 
 **Current tests exercise:**
-
-· ✅ Arithmetic (ADD, SUB, MUL)
-· ✅ Loops with conditional branches (B.EQ, B.NE)
-· ✅ Memory round-trips (STR → LDR, byte variants)
-· ✅ Recursive-style algorithms: Fibonacci and Pell numbers
-· ✅ Cross-validation against native Rust implementations (asserted)
-
----
-
-### ✦ Roadmap
-
-☐ Assembler — write programs in human-readable mnemonics, not hex bytes
-☐ Disassembler — pretty-print bytecode back to assembly
-☐ More instructions — PUSH/POP, CALL/JMP aliases, NOT, NEG, MOVI
-☐ Memory-mapped I/O — terminal output, keyboard input
-☐ Interrupts / traps
-☐ JIT compiler (Cranelift backend?)
-☐ Debugger — single-step, breakpoints, register watch
-☐ 32-bit / 16-bit modes
+- ✅ Arithmetic (ADD, SUB, MUL)
+- ✅ Loops with conditional branches (B.EQ, B.NE)
+- ✅ Memory round-trips (STR → LDR, byte variants)
+- ✅ Recursive-style algorithms: Fibonacci and Pell numbers
+- ✅ Cross-validation against native Rust implementations (asserted)
 
 ---
 
@@ -304,6 +290,6 @@ MIT — do what you like, attribution appreciated.
 
 May all beings be happy.
 
-Happy hacking. 🦀⚙️🕉
+Happy Programming. 🦀⚙️🕉
 
 </div>
