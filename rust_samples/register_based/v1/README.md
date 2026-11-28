@@ -54,36 +54,36 @@ All instructions are 32 bits wide, encoded little-endian. The opcode lives in th
 **Control**
 
 Mnemonic Opcode Encoding Description
-EXIT 0x00 [0x00 \| 24 unused] Halt the VM
-B 0x05 [op \| target:24] Unconditional branch
-B.EQ 0x06 [op \| target:24] Branch if Z == 1
-B.NE 0x0A [op \| target:24] Branch if Z == 0
-B.LT 0x0B [op \| target:24] Branch if N != V
-B.LE 0x0C [op \| target:24] Branch if Z \|\| N != V
-B.GT 0x0D [op \| target:24] Branch if !Z && N == V
-B.GE 0x0E [op \| target:24] Branch if N == V
-BL 0x22 [op \| target:24] Branch with link (x30 = pc + 4)
-RET 0x23 [0x23 \| 24 unused] Return to x30
+- EXIT 0x00 [0x00 \| 24 unused] Halt the VM
+- B 0x05 [op \| target:24] Unconditional branch
+- B.EQ 0x06 [op \| target:24] Branch if Z == 1
+- B.NE 0x0A [op \| target:24] Branch if Z == 0
+- B.LT 0x0B [op \| target:24] Branch if N != V
+- B.LE 0x0C [op \| target:24] Branch if Z \|\| N != V
+- B.GT 0x0D [op \| target:24] Branch if !Z && N == V
+- B.GE 0x0E [op \| target:24] Branch if N == V
+- BL 0x22 [op \| target:24] Branch with link (x30 = pc + 4)
+- RET 0x23 [0x23 \| 24 unused] Return to x30
 
 **Data Movement**
 
 Mnemonic Opcode Encoding Description
-MOV 0x01 [op \| rd \| imm:16] Load 16-bit immediate into register
-MOVR 0x26 [op \| rd \| rn \| unused] Register-to-register move
+- MOV 0x01 [op \| rd \| imm:16] Load 16-bit immediate into register
+- MOVR 0x26 [op \| rd \| rn \| unused] Register-to-register move
 
 **Arithmetic**
 
 Mnemonic Opcode Encoding Description
-ADD 0x02 [op \| rd \| rn \| rm] rd = rn + rm
-SUB 0x03 [op \| rd \| rn \| rm] rd = rn - rm
-MUL 0x04 [op \| rd \| rn \| rm] rd = rn * rm
-DIV 0x12 [op \| rd \| rn \| rm] rd = rn / rm (panics on ÷0)
-REM 0x14 [op \| rd \| rn \| rm] rd = rn % rm (panics on ÷0)
-ADDI 0x0F [op \| rd \| rn \| imm:8] rd = rn + imm
-SUBI 0x10 [op \| rd \| rn \| imm:8] rd = rn - imm
-MULI 0x11 [op \| rd \| rn \| imm:8] rd = rn * imm
-DIVI 0x13 [op \| rd \| rn \| imm:8] rd = rn / imm
-REMI 0x15 [op \| rd \| rn \| imm:8] rd = rn % imm
+- ADD 0x02 [op \| rd \| rn \| rm] rd = rn + rm
+- SUB 0x03 [op \| rd \| rn \| rm] rd = rn - rm
+- MUL 0x04 [op \| rd \| rn \| rm] rd = rn * rm
+- DIV 0x12 [op \| rd \| rn \| rm] rd = rn / rm (panics on ÷0)
+- REM 0x14 [op \| rd \| rn \| rm] rd = rn % rm (panics on ÷0)
+- ADDI 0x0F [op \| rd \| rn \| imm:8] rd = rn + imm
+- SUBI 0x10 [op \| rd \| rn \| imm:8] rd = rn - imm
+- MULI 0x11 [op \| rd \| rn \| imm:8] rd = rn * imm
+- DIVI 0x13 [op \| rd \| rn \| imm:8] rd = rn / imm
+- REMI 0x15 [op \| rd \| rn \| imm:8] rd = rn % imm
 
 **Logic & Bitwise**
 
