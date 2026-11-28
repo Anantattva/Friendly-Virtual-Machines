@@ -23,7 +23,7 @@ This is a minimal, from-scratch, ARM64-style bytecode interpreter implemented in
 
 No crates. No runtime. No magic. Just u32 words, u64 registers, and a Vec<u8> that thinks it's RAM.
 
-Designed for:
+**Designed for:**
 
 · 🧠 Learning how CPUs, ISAs, and interpreters actually work
 · ⚡ Benchmarking interpretation overhead against native Rust
@@ -52,7 +52,7 @@ Endianness Little-endian
 
 All instructions are 32 bits wide, encoded little-endian. The opcode lives in the low 8 bits, with operand fields packed above it.
 
-Control
+**Control**
 
 Mnemonic Opcode Encoding Description
 EXIT 0x00 [0x00 \| 24 unused] Halt the VM
@@ -66,13 +66,13 @@ B.GE 0x0E [op \| target:24] Branch if N == V
 BL 0x22 [op \| target:24] Branch with link (x30 = pc + 4)
 RET 0x23 [0x23 \| 24 unused] Return to x30
 
-Data Movement
+**Data Movement**
 
 Mnemonic Opcode Encoding Description
 MOV 0x01 [op \| rd \| imm:16] Load 16-bit immediate into register
 MOVR 0x26 [op \| rd \| rn \| unused] Register-to-register move
 
-Arithmetic
+**Arithmetic**
 
 Mnemonic Opcode Encoding Description
 ADD 0x02 [op \| rd \| rn \| rm] rd = rn + rm
@@ -86,7 +86,7 @@ MULI 0x11 [op \| rd \| rn \| imm:8] rd = rn * imm
 DIVI 0x13 [op \| rd \| rn \| imm:8] rd = rn / imm
 REMI 0x15 [op \| rd \| rn \| imm:8] rd = rn % imm
 
-Logic & Bitwise
+**Logic & Bitwise**
 
 Mnemonic Opcode Encoding Description
 AND 0x16 [op \| rd \| rn \| rm] Bitwise AND
@@ -96,7 +96,7 @@ ANDI 0x17 [op \| rd \| rn \| imm:8] Bitwise AND with immediate
 ORRI 0x19 [op \| rd \| rn \| imm:8] Bitwise OR with immediate
 EORI 0x1B [op \| rd \| rn \| imm:8] Bitwise XOR with immediate
 
-Shifts
+**Shifts**
 
 Mnemonic Opcode Encoding Description
 LSL 0x1C [op \| rd \| rn \| rm] Logical shift left by rm & 0x3F
@@ -106,7 +106,7 @@ LSRI 0x1F [op \| rd \| rn \| imm:6] Logical shift right immediate
 ASR 0x20 [op \| rd \| rn \| rm] Arithmetic shift right (sign-preserving)
 ASRI 0x21 [op \| rd \| rn \| imm:6] Arithmetic shift right immediate
 
-Memory
+**Memory**
 
 Mnemonic Opcode Encoding Description
 LDR 0x07 [op \| rd \| rn \| imm:8] Load 8 bytes from [rn + imm]
@@ -114,7 +114,7 @@ STR 0x08 [op \| rt \| rn \| imm:8] Store 8 bytes to [rn + imm]
 LDRB 0x24 [op \| rd \| rn \| imm:8] Load single byte
 STRB 0x25 [op \| rt \| rn \| imm:8] Store single byte
 
-Comparison & Flag-Setting
+**Comparison & Flag-Setting**
 
 Mnemonic Opcode Encoding Description
 CMP 0x09 [op \| rn \| rm \| unused] Set flags from rn - rm
@@ -161,7 +161,7 @@ cpu.execute_program(&program);
 assert_eq!(cpu.registers.read(3), 52);  // 42 + 10
 ```
 
-A Loop That Counts
+**A Loop That Counts**
 
 ```asm
         MOV  x0, #0        ; comparison stop = 0
@@ -181,7 +181,7 @@ After execution, x3 == 147 (21 × 7). ✅
 
 ---
 
-✦ Performance Snapshot
+### ✦ Performance Snapshot
 
 Benchmarks comparing the VM against native Rust (same algorithms, same hardware):
 
@@ -198,7 +198,7 @@ For context: execute_instruction does fetch → decode → dispatch → execute 
 
 ---
 
-✦ Project Layout
+### ✦ Project Layout
 
 ```
 src/
@@ -211,7 +211,7 @@ src/
 
 ---
 
-✦ Design Notes
+### ✦ Design Notes
 
 Compile-time dispatch
 
@@ -225,15 +225,15 @@ pub const INSTRUCTION_HANDLERS: [InstructionFn; 44] = [
 
 Decode is a single array index — no match, no vtable, no branch chain. Opcodes are sequential, so opcode maps directly to INSTRUCTION_HANDLERS[opcode].
 
-XZR is free
+**XZR is free**
 
 Register index 31 is hardwired zero — reads return 0, writes are discarded. No special-casing at the instruction level; the Registers::read / write methods handle it.
 
-Safe-unsafe hygiene
+**Safe-unsafe hygiene**
 
 The register file and instruction fetch use get_unchecked for speed, but the bounds are guaranteed by the u8-wide register index and the execution loop's pc < program.len() guard. Every unsafe access is preceded by an invariant the compiler cannot see but the ISA guarantees.
 
-Branch detection
+**Branch detection**
 
 Rather than have every branch instruction increment pc manually, the run loop does this:
 
@@ -249,13 +249,13 @@ A branch leaves pc changed (to the target); a non-branch leaves it alone, and th
 
 ---
 
-✦ Testing
+### ✦ Testing
 
 ```bash
 cargo run --release
 ```
 
-Current tests exercise:
+**Current tests exercise:**
 
 · ✅ Arithmetic (ADD, SUB, MUL)
 · ✅ Loops with conditional branches (B.EQ, B.NE)
@@ -265,7 +265,7 @@ Current tests exercise:
 
 ---
 
-✦ Roadmap
+### ✦ Roadmap
 
 ☐ Assembler — write programs in human-readable mnemonics, not hex bytes
 ☐ Disassembler — pretty-print bytecode back to assembly
