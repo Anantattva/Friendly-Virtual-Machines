@@ -24,11 +24,10 @@ This is a minimal, from-scratch, ARM64-style bytecode interpreter implemented in
 No crates. No runtime. No magic. Just u32 words, u64 registers, and a Vec<u8> that thinks it's RAM.
 
 **Designed for:**
-
-· 🧠 Learning how CPUs, ISAs, and interpreters actually work
-· ⚡ Benchmarking interpretation overhead against native Rust
-· 🛠️ Hacking — write your own assembler, add instructions, build a compiler target
-· 🕉️ Contemplation — every file begins with a mantra
+- 🧠 Learning how CPUs, ISAs, and interpreters actually work
+- ⚡ Benchmarking interpretation overhead against native Rust
+- 🛠️ Hacking — write your own assembler, add instructions, build a compiler target
+- 🕉️ Contemplation — every file begins with a mantra
 
 ---
 
