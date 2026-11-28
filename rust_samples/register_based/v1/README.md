@@ -19,7 +19,7 @@ A hand-crafted 64-bit RISC virtual machine (inspired by ARM64), written in pure 
 
 ### ✦ Overview
 
-This is a minimal, from-scratch 64-bit RISC-style virtual machine implemented in Rust. It features a clean load-decode-execute pipeline, a fixed-width 32-bit instruction encoding, a full ARM-style condition-flag model (N, Z, C, V), and a compile-time dispatch table for maximum interpreter throughput.
+This is a minimal, from-scratch, ARM64-style bytecode interpreter implemented in Rust. It features a clean fetch-decode-execute pipeline, a fixed-width 32-bit instruction encoding, a full ARM-style condition-flag model (N, Z, C, V), and a compile-time dispatch table for maximum interpreter throughput.
 
 No crates. No runtime. No magic. Just u32 words, u64 registers, and a Vec<u8> that thinks it's RAM.
 
