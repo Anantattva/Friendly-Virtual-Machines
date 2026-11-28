@@ -1,4 +1,4 @@
-## FVM Rust Registers V1
+## <div align="center">⚡ FVM Rust Registers V1 ⚡</div>
 ```
     ██████╗ ██╗███████╗ ██████╗    ██╗   ██╗███╗   ███╗
     ██╔══██╗██║██╔════╝██╔════╝    ██║   ██║████╗ ████║
