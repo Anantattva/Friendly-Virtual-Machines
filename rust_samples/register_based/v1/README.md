@@ -1,12 +1,4 @@
 ## <div align="center">⚡ FVM Rust Registers V1 ⚡</div>
-```
-    ██████╗ ██╗███████╗ ██████╗    ██╗   ██╗███╗   ███╗
-    ██╔══██╗██║██╔════╝██╔════╝    ██║   ██║████╗ ████║
-    ██████╔╝██║███████╗██║         ██║   ██║██╔████╔██║
-    ██╔══██╗██║╚════██║██║         ╚██╗ ██╔╝██║╚██╔╝██║
-    ██║  ██║██║███████║╚██████╗     ╚████╔╝ ██║ ╚═╝ ██║
-    ╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝      ╚═══╝  ╚═╝     ╚═╝
-```
 
 A hand-crafted 64-bit RISC virtual machine (inspired by ARM64), written in pure Rust.
 44 instructions. 31 general-purpose registers. Zero dependencies. One very fast interpreter.
