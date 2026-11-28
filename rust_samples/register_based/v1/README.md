@@ -263,24 +263,9 @@ cargo run --release
 
 ---
 
-#### ✦ Why "RISC-VM"?
-
-The instruction set is RISC-inspired but not RISC-V — it borrows the load/store architecture, the fixed-width encoding, and the ARM-style flag-condition model, but uses its own opcode map tuned for 8-bit clarity.
-
-It's a RISC-flavored VM. The name is a pun. We like it.
-
----
-
 ### ✦ License
 
 MIT — do what you like, attribution appreciated.
-
----
-
-### ✦ Acknowledgements
-- ARM Architecture Reference Manual — for the flag semantics (N, Z, C, V) that make conditional branching elegant.
-- RISC-V ISA spec — for the load/store discipline and the XZR convention.
-- Every emulator ever written — for proving that a while loop plus a match is all you need to emulate a computer.
 
 ---
 
