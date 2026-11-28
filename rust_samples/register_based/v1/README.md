@@ -32,7 +32,7 @@ Designed for:
 
 ---
 
-✦ Architecture at a Glance
+### ✦ Architecture at a Glance
 
 Component Specification
 Word size 64-bit
@@ -48,7 +48,7 @@ Endianness Little-endian
 
 ---
 
-✦ Instruction Set
+### ✦ Instruction Set
 
 All instructions are 32 bits wide, encoded little-endian. The opcode lives in the low 8 bits, with operand fields packed above it.
 
