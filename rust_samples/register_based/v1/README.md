@@ -126,7 +126,7 @@ SUBIS 0x2B [op \| rd \| rn \| imm:8] SUBI + set flags
 
 ---
 
-✦ The Flag Model (ARM-style)
+### ✦ The Flag Model (ARM-style)
 
 All condition codes follow the classic ARM semantics:
 
@@ -140,7 +140,7 @@ This gives you the full set of comparison branches — EQ, NE, LT, LE, GT, GE �
 
 ---
 
-✦ Quick Start
+### ✦ Quick Start
 
 ```rust
 use crate::cpu::CPU;
