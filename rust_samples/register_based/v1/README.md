@@ -19,9 +19,9 @@ A hand-crafted 64-bit RISC virtual machine (inspired by ARM64), written in pure 
 
 ### ✦ Overview
 
-This is a minimal, from-scratch, ARM64-style bytecode interpreter implemented in Rust. It features a clean fetch-decode-execute pipeline, a fixed-width 32-bit instruction encoding, a full ARM-style condition-flag model (N, Z, C, V), and a compile-time dispatch table for maximum interpreter throughput.
+This is a minimal, from-scratch, ARM64-style bytecode interpreter implemented in Rust. It features a clean `fetch-decode-execute` pipeline, a `fixed-width 32-bit instruction encoding`, a full `ARM-style condition-flag model (N, Z, C, V)`, and a function pointer dispatch table for maximum interpreter throughput.
 
-No crates. No runtime. No magic. Just u32 words, u64 registers, and a Vec<u8> that thinks it's RAM.
+> *No crates. No runtime. No magic. Just u32 words, u64 registers, and a Vec<u8> that thinks it's RAM.*
 
 **Designed for:**
 - 🧠 Learning how CPUs, ISAs, and interpreters actually work
@@ -33,17 +33,16 @@ No crates. No runtime. No magic. Just u32 words, u64 registers, and a Vec<u8> th
 
 ### ✦ Architecture at a Glance
 
-Component Specification
-Word size 64-bit
-Instruction width 32-bit (fixed)
-Registers x0–x30 (31 GPRs) + x31 = XZR (hardwired zero)
-Program counter pc: u64
-Flags Z (zero), N (negative), C (carry / !borrow), V (overflow)
-Link register x30 (used by BL / RET)
-Memory Flat Vec<u8>, little-endian
-Opcode space 8 bits (256 possible, 44 implemented)
-Dispatch Static function-pointer table
-Endianness Little-endian
+**Component Specification:**
+- Word size: 64-bit
+- Instruction width: 32-bit (fixed)
+- Registers: x0–x30 (31 GPRs) + x31 = XZR (hardwired zero)
+- Program counter: pc: u64
+- Flags: Z (zero), N (negative), C (carry / !borrow), V (overflow)
+- Link register: x30 (used by BL / RET)
+- Memory: Flat Vec<u8>, little-endian
+- Opcode: space 8 bits (256 possible, 44 implemented)
+-Dispatch: Static function-pointer table 
 
 ---
 
